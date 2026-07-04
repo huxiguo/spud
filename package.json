@@ -1,0 +1,38 @@
+{
+  "name": "spud",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "IKUN",
+    "kun",
+    "坤"
+  ],
+  "license": "ISC",
+  "author": "ikun",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm build:packages && pnpm dev:apps",
+    "dev:apps": "pnpm --parallel --filter \"./apps/*\" dev",
+    "build:packages": "pnpm --parallel --filter \"./packages/*\" build",
+    "build:web": "pnpm build:packages && pnpm --filter @spud/web build",
+    "build:api": "pnpm build:packages && pnpm --filter @spud/api build",
+    "preview:web": "pnpm --filter @spud/web preview",
+    "fmt": "pnpm --parallel fmt",
+    "lint": "pnpm --parallel lint",
+    "api-prisma:generate": "pnpm --parallel prisma:generate",
+    "start:api-prod": "node apps/api/dist/main"
+  },
+  "devDependencies": {
+    "oxfmt": "0.57.0",
+    "oxlint": "1.72.0",
+    "typescript": "6.0.3",
+    "vitest": "^4.1.9"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.5.2",
+      "onFail": "error"
+    }
+  }
+}

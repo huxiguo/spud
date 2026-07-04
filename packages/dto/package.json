@@ -1,0 +1,38 @@
+{
+  "name": "@spud/dto",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "IKUN",
+    "kun",
+    "坤"
+  ],
+  "license": "ISC",
+  "author": "ikun",
+  "type": "module",
+  "main": "./index.ts",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "clean": "rm -rf dist",
+    "lint": "oxlint . --fix",
+    "fmt": "oxfmt src/"
+  },
+  "devDependencies": {
+    "tsdown": "0.22.3"
+  }
+}

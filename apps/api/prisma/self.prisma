@@ -1,0 +1,33 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma/self"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+// 平台账号
+model Account {
+  /// 主键
+  id         String  @id @db.Char(36)
+  /// 用户名
+  username   String  @unique @db.VarChar(50)
+  /// 密码（哈希）
+  password   String  @db.VarChar(255)
+  /// 显示名称
+  name       String  @db.VarChar(50)
+  /// 是否允许登录
+  allowLogin Boolean @db.TinyInt
+  /// 创建时间（毫秒时间戳）
+  createdAt  BigInt  @db.BigInt
+  /// 创建人 ID
+  createdBy  String  @db.Char(36)
+  /// 更新时间（毫秒时间戳）
+  updatedAt  BigInt? @db.BigInt
+  /// 更新人 ID
+  updatedBy  String? @db.Char(36)
+
+  @@map("account")
+}
