@@ -15,6 +15,7 @@
     "sdev": "pnpm build:packages && pnpm dev:apps:no-mp",
     "dev:apps": "pnpm --parallel --filter \"./apps/*\" dev",
     "dev:apps:no-mp": "pnpm --parallel --filter \"!./apps/mini-app\" dev",
+    "dev:web": "pnpm --parallel --filter \"./apps/web\" dev",
     "build:packages": "pnpm --parallel --filter \"./packages/*\" build",
     "build:web": "pnpm build:packages && pnpm --filter @spud/web build",
     "build:api": "pnpm build:packages && pnpm --filter @spud/api build",
