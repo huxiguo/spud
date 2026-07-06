@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "pnpm build:packages && pnpm dev:apps",
     "dev:apps": "pnpm --parallel --filter \"./apps/*\" dev",
+    "dev:web": "pnpm --parallel --filter \"./apps/web\" dev",
     "build:packages": "pnpm --parallel --filter \"./packages/*\" build",
     "build:web": "pnpm build:packages && pnpm --filter @spud/web build",
     "build:api": "pnpm build:packages && pnpm --filter @spud/api build",
