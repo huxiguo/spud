@@ -176,4 +176,3 @@ coverage
 __screenshots__/
 
 # You already have a .gitignore file. Don't forget to add .env in it to not commit any private information.
-.env
