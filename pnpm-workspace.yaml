@@ -1,8 +1,15 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
+  - "apps/*"
+  - "packages/*"
 allowBuilds:
-  '@prisma/engines': false
-  prisma: false
+  "@parcel/watcher": true
+  "@prisma/engines": true
+  "@swc/core": true
+  "@uni-helper/unocss-preset-uni": true
+  core-js: true
+  esbuild: true
+  less: true
+  prisma: true
+  protobufjs: true
   unrs-resolver: true
-  vue-demi: false
+  vue-demi: true
