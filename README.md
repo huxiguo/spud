@@ -81,3 +81,5 @@ pnpm fmt                       # 代码格式化
 `apps/api` 使用 `.oxlintrc.json` 和 `.oxfmtrc.json` 不使用 oxfmt.config.ts 原因
 
 NestJS 项目中 `package.json` 未声明 `"type": "module"`，Node.js 在加载 `.ts` 配置文件时无法确定模块类型，会触发 `Module type of ... is not specified... Reparsing as ES module because module syntax was detected` 警告。避免该警告，保持输出干净。
+
+# 小程序版本在 mini-app 分支
